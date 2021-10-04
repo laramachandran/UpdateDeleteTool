@@ -1,0 +1,38 @@
+# Validator
+
+The DeleteUpdateProcessor is a command line java application that is used to provide support
+to jurisdictions who want to update or delete records in the CDC Data Clearinghouse.
+
+DeleteUpdateProcessor is implemented in the `com.ainq.izgateway.extract.DeleteUpdateProcessor` class and has
+a command line interface described in the [DeleteUpdateProcessor](DeleteUpdateProcessor.html) description page.
+
+This tool operates over the old and new CVRS files that the jurisdiction has available to
+produce the three sets of files that need to be uploaded to DCH.
+
+#[[##]]# Installation
+1. Download extract-validator-${project.version}.jar from the [Releases](https://github.com/CDCGov/CDC_IIS_Open_Tools/releases/download/Release_${project.version}/extract-validator-${project.version}.jar) page into
+a folder [shown as validator-${project.version} below] on your system.
+2. Download extract-validator-lib-${project.version}.zip the [Releases](https://github.com/CDCGov/CDC_IIS_Open_Tools/releases/download/Release_${project.version}/extract-validator-lib-${project.version}.zip) page into
+the same folder, and the unzip that file into the validator-${project.version}/lib folder.
+
+#[[##]]# Usage
+These tools require use of Java 1.8 or later.  They have been developed and tested with
+[OpenJDK 11](https://jdk.java.net/java-se-ri/11).
+```
+    $ java -classpath /validator-${project.version}/extract-validator-${project.version}.jar com.ainq.izgateway.extract.DeleteUpdateProcessor -oOldFiles -nNewFiles -rOutputFolder
+```
+
+#[[###]]# Arguments
+The following arguments must be provided to run the DeleteUpdateProcessor
+
+-oOldFiles
+:
+
+-nNewFiles
+:
+
+-rOutputFolder
+: Specify the folder where output files will be placed.
+
+-v
+: Enable validation of input files.
